@@ -1,0 +1,7 @@
+debug.log
+geckodriver.log
+assets/
+report.html
+.vscode
+.pytest_cache
+*/__pycache__
