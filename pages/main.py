@@ -1,6 +1,4 @@
 from base.selenium_driver import BaseDriver
-from time import sleep
-from selenium.webdriver.common.keys import Keys
 
 
 class MainApp(BaseDriver):

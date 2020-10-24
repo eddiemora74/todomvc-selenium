@@ -1,6 +1,5 @@
 import pytest
 from selenium import webdriver
-from time import sleep
 
 
 @pytest.yield_fixture(scope="class")
@@ -10,6 +9,7 @@ def oneTimeSetup(request, browser):
     """
     app_url = "http://todomvc.com/examples/react/#/"
     driver = webdriver.Firefox() if browser == "firefox" else webdriver.Chrome()
+    driver.implicitly_wait(1)
     driver.maximize_window()
     driver.get(app_url)
 
@@ -18,12 +18,6 @@ def oneTimeSetup(request, browser):
 
     yield driver
     driver.quit()
-
-
-# @pytest.yield_fixture()
-# def demoWaits():
-#     yield
-#     sleep(0.5)
 
 
 def pytest_addoption(parser):

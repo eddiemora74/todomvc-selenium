@@ -1,9 +1,7 @@
-import selenium.webdriver.support.expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
-from traceback import print_stack
 from time import sleep
 
 

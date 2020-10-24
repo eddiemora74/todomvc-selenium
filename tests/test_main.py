@@ -1,7 +1,6 @@
 from pages.main import MainApp
 import unittest
 import pytest
-from time import sleep
 
 
 @pytest.mark.usefixtures("oneTimeSetup")
@@ -15,7 +14,6 @@ class TestToDo(unittest.TestCase):
     @pytest.mark.run(order=1)
     def test_todo_list_not_visible(self):
         assert self.app.todo_list_is_present() == False
-        sleep(1)
 
     @pytest.mark.run(order=2)
     def test_add_one_todo(self):
